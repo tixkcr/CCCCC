@@ -1,0 +1,33 @@
+#include <stdio.h>
+int increment(int x) //这里吧原来的void 改正了int 类型，因此有了返回值
+{
+	return x += 1;  /*这里的x += 1等价于 x = x + 1 ，*/
+                    /* int函数要有返回值这里加入return */              
+}
+
+int main(void)
+{
+	int i = 1, j = 2;
+	int a,b;
+    a = increment(i);
+    b = increment(j);
+    printf("%d,%d",a,b); //加入打印内容进行测试
+    return 0;
+}
+/* 以下内容为习题代码
+ *#include <stdio.h>
+ *void increment(int x)
+ *{
+ *	x = x + 1;
+ *}
+ *
+ *int main(void)
+ *{
+ *	int i = 1, j = 2;
+ *	increment(i); // i now becomes 2 
+ *	increment(j); // j now becomes 3 
+ *	return 0;
+ *} 
+ *我们在main函数中调用increment增加变量i和j的值，这样能奏效吗？为什么？
+ *不能，因为i和j已经被定为了1和2，increment函数无法改变原变量的值，只是创建了一个副本
+ */
