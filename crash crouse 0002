@@ -1,0 +1,25 @@
+// Prime number detection code
+#include <stdio.h> 
+int  IsPrimeNumber(int number)
+{
+    int i;
+    if(number <=1)
+        return 0;
+    for (i = 2; i < number; i++)
+    {
+        if (number % i == 0 )
+            return 0;
+    }
+    return 1;
+}
+
+int main(){
+    int n;
+    printf("PLZ entry a number：");
+    scanf("%d",&n);
+    if (IsPrimeNumber(n))
+        printf("\n %d is a PrimeNumber",n);
+    else
+        printf("\n %d is not a PrimeNumber",n);
+    return 0;
+}
