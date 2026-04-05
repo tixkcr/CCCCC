@@ -1,4 +1,4 @@
-// add two numbers fuction
+// add two numbers function
 #include <stdio.h> 
 int add(int x, int y)
 {
