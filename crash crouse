@@ -1,4 +1,4 @@
-// crash crouse: sequencing 10 numbers
+// crash crouse: Sort ten numbers
 #include <stdio.h> 
 int main() 
 { 
