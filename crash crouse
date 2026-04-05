@@ -1,0 +1,20 @@
+// crash crouse: sequencing 10 numbers
+#include <stdio.h> 
+int main() 
+{ 
+    int min = 0, temp;
+    int a[10];
+    printf ("请输入十个数：\n");
+    for(int i = 0;i < 10;i++)
+       scanf("%d",&a[i]);
+    for(int i = 1; i < 10;i++){
+       if (a[i] < a[min])
+           min = i;
+    }
+    temp = a[0];
+    a[0]= a[min];
+    a[min]= temp;
+    for (int i = 0; i < 10;i++)
+       printf("%d\n",a[i]);
+    return 0;   
+}
