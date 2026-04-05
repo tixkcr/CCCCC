@@ -1,0 +1,14 @@
+// add two numbers fuction
+#include <stdio.h> 
+int add(int x, int y)
+{
+    int result = x + y;
+    return result;
+}
+
+int main()
+{
+    int a = add(2,3);
+    printf("%d",a);
+    return 0;
+}
